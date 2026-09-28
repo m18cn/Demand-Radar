@@ -1,0 +1,386 @@
+[
+  {
+    "id": "req-001",
+    "title": "小红书内容一键排版发布到多平台",
+    "description": "博主在小红书写好内容后，希望能一键同步并自动适配排版到公众号、知乎、B 站等平台，避免逐平台手动调整格式。",
+    "targetUser": "内容创作者 / 小红书博主",
+    "scenario": "每次发布都要在多个平台之间复制内容并手动重新排版",
+    "painPoints": [
+      "多平台重复排版耗时",
+      "各平台格式与图片尺寸不兼容",
+      "发布后需逐平台检查显示效果"
+    ],
+    "currentSolution": "手动复制粘贴，或使用单一平台的编辑器逐个调整",
+    "competitors": ["135编辑器", "秀米", "壹伴"],
+    "source": {
+      "type": "xiaohongshu",
+      "url": "https://www.xiaohongshu.com/explore",
+      "note": "多个博主在评论区抱怨多平台排版耗时"
+    },
+    "tags": ["content", "saas", "效率"],
+    "status": "inbox",
+    "scores": {
+      "frequency": 4,
+      "pain": 4,
+      "willingnessToPay": 3,
+      "marketDemand": 4,
+      "feasibility": 3
+    },
+    "opportunityScore": 72,
+    "discoveredAt": "2025-01-05T09:30:00.000Z",
+    "createdAt": "2025-01-05T09:30:00.000Z",
+    "updatedAt": "2025-01-05T09:30:00.000Z"
+  },
+  {
+    "id": "req-002",
+    "title": "跨境电商卖家竞品价格监控工具",
+    "description": "跨境电商卖家希望自动跟踪竞品在多个平台上的价格与库存变化，并在降价或断货时收到提醒。",
+    "targetUser": "跨境电商卖家 / 运营",
+    "scenario": "每天手动打开多个站点查看竞品价格与库存，效率低且容易漏掉变化",
+    "painPoints": [
+      "竞品价格变动发现不及时",
+      "跨平台监控需人工比对",
+      "降价策略决策缺乏数据支撑"
+    ],
+    "currentSolution": "人工定期截图或使用零散的脚本抓取",
+    "competitors": ["Keepa", "CamelCamelCamel", "卖家精灵"],
+    "source": {
+      "type": "ecommerce",
+      "url": "https://www.amazon.com",
+      "note": "卖家社群中反复出现价格监控的求助帖"
+    },
+    "tags": ["ecommerce", "monitoring", "b2b"],
+    "status": "researching",
+    "scores": {
+      "frequency": 4,
+      "pain": 4,
+      "willingnessToPay": 5,
+      "marketDemand": 4,
+      "feasibility": 3
+    },
+    "opportunityScore": 80,
+    "discoveredAt": "2025-01-08T14:15:00.000Z",
+    "createdAt": "2025-01-08T14:15:00.000Z",
+    "updatedAt": "2025-01-09T10:00:00.000Z"
+  },
+  {
+    "id": "req-003",
+    "title": "无需注册即可使用的轻量 API 调试工具",
+    "description": "开发者希望有一个打开网页就能用、无需注册登录的 API 调试工具，支持环境变量与简单的团队分享。",
+    "targetUser": "前后端开发者",
+    "scenario": "临时调试接口时不想为了一个请求注册账号或安装桌面应用",
+    "painPoints": [
+      "现有工具注册门槛高",
+      "临时调试需要轻量入口",
+      "接口集合不便快速分享"
+    ],
+    "currentSolution": "Postman / Insomnia 等重客户端，或 curl 命令行",
+    "competitors": ["Postman", "Insomnia", "Hoppscotch"],
+    "source": {
+      "type": "github",
+      "url": "https://github.com/hoppscotch/hoppscotch",
+      "note": "相关开源项目 issue 中高频提及注册与体积问题"
+    },
+    "tags": ["devtools", "api"],
+    "status": "inbox",
+    "scores": {
+      "frequency": 3,
+      "pain": 3,
+      "willingnessToPay": 2,
+      "marketDemand": 3,
+      "feasibility": 4
+    },
+    "opportunityScore": 60,
+    "discoveredAt": "2025-01-11T20:00:00.000Z",
+    "createdAt": "2025-01-11T20:00:00.000Z",
+    "updatedAt": "2025-01-11T20:00:00.000Z"
+  },
+  {
+    "id": "req-004",
+    "title": "独立开发者用户反馈收集组件",
+    "description": "独立开发者希望在产品中嵌入一个轻量反馈组件，让用户直接提交反馈并自动附带截图与上下文信息。",
+    "targetUser": "独立开发者 / 小型团队",
+    "scenario": "缺少统一的用户反馈渠道，反馈散落在邮件、社群与评论区",
+    "painPoints": [
+      "反馈渠道分散难以汇总",
+      "缺少用户使用上下文与截图",
+      "反馈难以关联到具体页面"
+    ],
+    "currentSolution": "邮件 + 表单工具，或手动整理社群反馈",
+    "competitors": ["Canny", "UserVoice", "反馈表单类 SaaS"],
+    "source": {
+      "type": "github",
+      "url": "https://github.com/featurevisor/featurevisor",
+      "note": "多个独立开发者项目 README 中求反馈组件"
+    },
+    "tags": ["devtools", "saas", "feedback"],
+    "status": "validated",
+    "scores": {
+      "frequency": 4,
+      "pain": 4,
+      "willingnessToPay": 4,
+      "marketDemand": 5,
+      "feasibility": 4
+    },
+    "opportunityScore": 84,
+    "discoveredAt": "2024-12-20T11:00:00.000Z",
+    "createdAt": "2024-12-20T11:00:00.000Z",
+    "updatedAt": "2025-01-02T15:30:00.000Z"
+  },
+  {
+    "id": "req-005",
+    "title": "中文发票与报价单生成器",
+    "description": "自由职业者与小微工作室需要一个简单的中文发票、报价单与对账单生成工具，支持客户信息管理和导出 PDF。",
+    "targetUser": "自由职业者 / 小微企业主",
+    "scenario": "每次接单都要手动制作报价单与发票，格式不统一且耗时",
+    "painPoints": [
+      "手动制作报价单发票耗时",
+      "格式不统一显得不专业",
+      "客户与项目信息缺乏集中管理"
+    ],
+    "currentSolution": "Excel / Word 模板手工填写，或本地记账软件",
+    "competitors": ["简道云", "畅捷通", "各类 Excel 模板"],
+    "source": {
+      "type": "job",
+      "url": "",
+      "note": "接单交流中多个自由职业者提到报价与开票流程繁琐"
+    },
+    "tags": ["finance", "freelance", "效率"],
+    "status": "mvp",
+    "scores": {
+      "frequency": 4,
+      "pain": 3,
+      "willingnessToPay": 4,
+      "marketDemand": 4,
+      "feasibility": 4
+    },
+    "opportunityScore": 76,
+    "discoveredAt": "2024-12-28T16:40:00.000Z",
+    "createdAt": "2024-12-28T16:40:00.000Z",
+    "updatedAt": "2025-01-06T09:00:00.000Z"
+  },
+  {
+    "id": "req-006",
+    "title": "Figma 设计稿转 React 组件工具",
+    "description": "设计师与前端希望把 Figma 设计稿更准确地转换为可用的 React 组件代码，保留设计 token 与布局。",
+    "targetUser": "前端开发者 / 设计师",
+    "scenario": "设计稿到代码的转换仍需要大量手工切图与还原，返工率高",
+    "painPoints": [
+      "设计还原度依赖人工",
+      "设计 token 与代码不一致",
+      "迭代时同步成本高"
+    ],
+    "currentSolution": "Figma 官方插件、Anima 或手工切图",
+    "competitors": ["Anima", "Locofy", "Figma Dev Mode"],
+    "source": {
+      "type": "reddit",
+      "url": "https://www.reddit.com/r/reactjs",
+      "note": "reddit 前端社区讨论 design-to-code 的准确性"
+    },
+    "tags": ["design", "devtools", "ai"],
+    "status": "researching",
+    "scores": {
+      "frequency": 3,
+      "pain": 4,
+      "willingnessToPay": 3,
+      "marketDemand": 4,
+      "feasibility": 3
+    },
+    "opportunityScore": 68,
+    "discoveredAt": "2025-01-03T10:20:00.000Z",
+    "createdAt": "2025-01-03T10:20:00.000Z",
+    "updatedAt": "2025-01-03T10:20:00.000Z"
+  },
+  {
+    "id": "req-007",
+    "title": "B 站视频字幕时间轴自动生成",
+    "description": "UP 主希望自动为视频生成带准确时间轴的字幕文件，用于投稿与外挂字幕。",
+    "targetUser": "B 站 UP 主 / 视频创作者",
+    "scenario": "视频上传后需要手动校对字幕时间轴，长视频尤其耗时",
+    "painPoints": [
+      "字幕时间轴校对耗时",
+      "语音识别准确率不足",
+      "方言与专业术语识别差"
+    ],
+    "currentSolution": "剪映自动字幕、B 站官方字幕，或人工校对",
+    "competitors": ["剪映", "Arctime", "网易见外"],
+    "source": {
+      "type": "bilibili",
+      "url": "https://www.bilibili.com",
+      "note": "创作者工具竞争激烈，已有成熟免费方案"
+    },
+    "tags": ["video", "ai"],
+    "status": "rejected",
+    "scores": {
+      "frequency": 3,
+      "pain": 2,
+      "willingnessToPay": 1,
+      "marketDemand": 2,
+      "feasibility": 3
+    },
+    "opportunityScore": 44,
+    "discoveredAt": "2024-12-15T08:00:00.000Z",
+    "createdAt": "2024-12-15T08:00:00.000Z",
+    "updatedAt": "2024-12-22T14:00:00.000Z"
+  },
+  {
+    "id": "req-008",
+    "title": "儿童疫苗接种提醒应用",
+    "description": "家长希望有一个按孩子年龄自动生成接种计划的提醒应用，支持多孩管理与本地接种政策。",
+    "targetUser": "新生儿家长 / 家庭",
+    "scenario": "不同疫苗的接种时间与间隔容易记混，错过接种窗口",
+    "painPoints": [
+      "接种时间点容易遗忘",
+      "多孩接种计划难管理",
+      "各地政策差异大"
+    ],
+    "currentSolution": "社区卫生服务中心通知、纸笔记录或通用日历提醒",
+    "competitors": ["小豆苗", "各地卫健委公众号"],
+    "source": {
+      "type": "app",
+      "url": "",
+      "note": "应用商店中同类产品评分两极，家长仍抱怨提醒不智能"
+    },
+    "tags": ["health", "family", "mobile"],
+    "status": "inbox",
+    "scores": {
+      "frequency": 3,
+      "pain": 3,
+      "willingnessToPay": 2,
+      "marketDemand": 3,
+      "feasibility": 4
+    },
+    "opportunityScore": 60,
+    "discoveredAt": "2025-01-12T07:10:00.000Z",
+    "createdAt": "2025-01-12T07:10:00.000Z",
+    "updatedAt": "2025-01-12T07:10:00.000Z"
+  },
+  {
+    "id": "req-009",
+    "title": "简历关键词匹配与优化工具",
+    "description": "求职者希望针对岗位描述自动分析简历关键词匹配度，并给出优化建议。",
+    "targetUser": "求职者",
+    "scenario": "投递前需要针对不同 JD 反复调整简历关键词",
+    "painPoints": [
+      "关键词匹配靠人工判断",
+      "不同 JD 需多次改写",
+      "缺乏量化反馈"
+    ],
+    "currentSolution": "人工对照 JD 修改，或使用在线简历评测",
+    "competitors": ["Jobscan", "各类简历优化服务"],
+    "source": {
+      "type": "job",
+      "url": "",
+      "note": "竞品成熟且市场拥挤，差异化空间有限"
+    },
+    "tags": ["career", "ai"],
+    "status": "rejected",
+    "scores": {
+      "frequency": 3,
+      "pain": 2,
+      "willingnessToPay": 1,
+      "marketDemand": 2,
+      "feasibility": 2
+    },
+    "opportunityScore": 40,
+    "discoveredAt": "2024-12-10T12:00:00.000Z",
+    "createdAt": "2024-12-10T12:00:00.000Z",
+    "updatedAt": "2024-12-18T10:00:00.000Z"
+  },
+  {
+    "id": "req-010",
+    "title": "公众号运营选题灵感库",
+    "description": "公众号运营者希望有一个按领域聚合热点的选题灵感库，能追踪竞品文章表现并推荐可写的选题。",
+    "targetUser": "公众号运营 / 内容团队",
+    "scenario": "缺乏持续稳定的选题来源，热点追踪依赖手动刷资讯",
+    "painPoints": [
+      "选题灵感不稳定",
+      "热点追踪耗时",
+      "竞品文章表现难量化"
+    ],
+    "currentSolution": "手动关注多个资讯源与竞品公众号",
+    "competitors": ["新榜", "西瓜数据", "鸟哥笔记"],
+    "source": {
+      "type": "wechat",
+      "url": "",
+      "note": "运营社群里经常讨论选题荒"
+    },
+    "tags": ["content", "marketing", "ai"],
+    "status": "researching",
+    "scores": {
+      "frequency": 4,
+      "pain": 3,
+      "willingnessToPay": 2,
+      "marketDemand": 4,
+      "feasibility": 3
+    },
+    "opportunityScore": 64,
+    "discoveredAt": "2025-01-07T18:30:00.000Z",
+    "createdAt": "2025-01-07T18:30:00.000Z",
+    "updatedAt": "2025-01-07T18:30:00.000Z"
+  },
+  {
+    "id": "req-011",
+    "title": "二手交易自动比价工具",
+    "description": "用户希望在二手平台上发布或购买商品时，能自动比对各平台成交价给出合理定价建议。",
+    "targetUser": "二手交易用户",
+    "scenario": "定价靠感觉，买家担心买贵，卖家担心卖亏",
+    "painPoints": [
+      "缺乏定价参考",
+      "跨平台比价麻烦",
+      "成交价数据不透明"
+    ],
+    "currentSolution": "手动搜索同类商品历史价格",
+    "competitors": ["转转估价", "闲鱼", "平台内置估价"],
+    "source": {
+      "type": "ecommerce",
+      "url": "",
+      "note": "二手交易社区中估价请求频繁"
+    },
+    "tags": ["ecommerce", "consumer"],
+    "status": "inbox",
+    "scores": {
+      "frequency": 3,
+      "pain": 2,
+      "willingnessToPay": 2,
+      "marketDemand": 3,
+      "feasibility": 3
+    },
+    "opportunityScore": 52,
+    "discoveredAt": "2025-01-10T22:00:00.000Z",
+    "createdAt": "2025-01-10T22:00:00.000Z",
+    "updatedAt": "2025-01-10T22:00:00.000Z"
+  },
+  {
+    "id": "req-012",
+    "title": "GitHub 项目活跃度与趋势分析",
+    "description": "开发者希望快速判断一个开源项目的活跃度、维护趋势与社区健康度，以便安全地选型依赖。",
+    "targetUser": "开发者 / 技术选型者",
+    "scenario": "引入依赖前需要评估项目是否活跃、维护是否健康",
+    "painPoints": [
+      "项目活跃度需翻多个数据源",
+      "维护趋势难以量化",
+      "选型风险判断依赖经验"
+    ],
+    "currentSolution": "手动查看 commit、issue、release 与 star 趋势",
+    "competitors": ["OSS Insight", "Libraries.io", "Star History"],
+    "source": {
+      "type": "github",
+      "url": "https://github.com/trending",
+      "note": "技术选型讨论中频繁提及活跃度评估需求"
+    },
+    "tags": ["devtools", "analytics"],
+    "status": "validated",
+    "scores": {
+      "frequency": 4,
+      "pain": 3,
+      "willingnessToPay": 4,
+      "marketDemand": 4,
+      "feasibility": 5
+    },
+    "opportunityScore": 80,
+    "discoveredAt": "2024-12-18T09:00:00.000Z",
+    "createdAt": "2024-12-18T09:00:00.000Z",
+    "updatedAt": "2024-12-18T09:00:00.000Z"
+  }
+]
