@@ -7,7 +7,6 @@ import type {
 import { LocalStorageAdapter } from '@/lib/storage/LocalStorageAdapter'
 import type { StorageAdapter } from '@/lib/storage/StorageAdapter'
 import { loadSeedRequirements } from '@/lib/storage/seed'
-import { isInitialized, markInitialized } from '@/lib/storage/bootstrap'
 import { validateRequirement } from '@/lib/validation/requirementSchema'
 import {
   createRequirement,
@@ -33,7 +32,7 @@ interface RequirementStore {
   setStatus: (id: string, status: RequirementStatus) => Promise<void>
   updateScores: (id: string, scores: RequirementScores) => Promise<void>
   clearAllData: () => Promise<void>
-  resetDemoData: () => Promise<void>
+  loadSampleData: () => Promise<void>
   replaceAll: (items: Requirement[]) => Promise<void>
 }
 
@@ -71,16 +70,7 @@ export const useRequirementStore = create<RequirementStore>()((set, get) => {
       set({ status: 'loading', error: null })
       try {
         const stored = await adapter.load()
-        if (stored.length > 0) {
-          set({ requirements: normalizeStored(stored), status: 'ready' })
-        } else if (!isInitialized()) {
-          const seed = loadSeedRequirements()
-          await adapter.save(seed)
-          markInitialized()
-          set({ requirements: seed, status: 'ready' })
-        } else {
-          set({ requirements: [], status: 'ready' })
-        }
+        set({ requirements: normalizeStored(stored), status: 'ready' })
       } catch (error) {
         set({ status: 'error', error: errorMessage(error) })
       }
@@ -137,7 +127,7 @@ export const useRequirementStore = create<RequirementStore>()((set, get) => {
       }
     },
 
-    resetDemoData: async () => {
+    loadSampleData: async () => {
       const seed = loadSeedRequirements()
       await commit(seed)
     },

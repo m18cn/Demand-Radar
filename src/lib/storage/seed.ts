@@ -4,7 +4,7 @@ import { computeOpportunityScore } from '@/lib/opportunityScore'
 import { requirementArraySchema } from '@/lib/validation/requirementSchema'
 
 /**
- * 读取初始演示数据，并保证 opportunityScore 与 scores 一致。
+ * 读取示例数据（仅由用户主动加载），并保证 opportunityScore 与 scores 一致。
  */
 export function loadSeedRequirements(): Requirement[] {
   const parsed = requirementArraySchema.parse(seedData)

@@ -27,14 +27,14 @@ import {
 import type { Requirement } from '@/types/requirement'
 
 type PendingAction =
-  | { kind: 'reset' }
+  | { kind: 'sample' }
   | { kind: 'clear' }
   | { kind: 'import'; data: Requirement[] }
 
 export function DataManagementMenu() {
   const requirements = useRequirementStore((s) => s.requirements)
   const replaceAll = useRequirementStore((s) => s.replaceAll)
-  const resetDemoData = useRequirementStore((s) => s.resetDemoData)
+  const loadSampleData = useRequirementStore((s) => s.loadSampleData)
   const clearAllData = useRequirementStore((s) => s.clearAllData)
 
   const [pending, setPending] = useState<PendingAction | null>(null)
@@ -57,10 +57,10 @@ export function DataManagementMenu() {
   const dialog = (() => {
     if (!pending) return { title: '', description: '' }
     switch (pending.kind) {
-      case 'reset':
+      case 'sample':
         return {
-          title: '重置演示数据',
-          description: '将用演示数据替换当前所有需求。此操作无法撤销。',
+          title: '加载示例数据',
+          description: '将用示例数据替换当前所有需求。此操作无法撤销。',
         }
       case 'clear':
         return {
@@ -77,7 +77,7 @@ export function DataManagementMenu() {
 
   const confirm = async () => {
     if (!pending) return
-    if (pending.kind === 'reset') await resetDemoData()
+    if (pending.kind === 'sample') await loadSampleData()
     else if (pending.kind === 'clear') await clearAllData()
     else if (pending.kind === 'import') await replaceAll(pending.data)
     setPending(null)
@@ -106,9 +106,9 @@ export function DataManagementMenu() {
             导入 JSON
           </DropdownMenuItem>
           <DropdownMenuSeparator />
-          <DropdownMenuItem onClick={() => setPending({ kind: 'reset' })}>
+          <DropdownMenuItem onClick={() => setPending({ kind: 'sample' })}>
             <RotateCcw />
-            重置演示数据
+            加载示例数据
           </DropdownMenuItem>
           <DropdownMenuItem
             className="text-destructive focus:text-destructive focus:bg-destructive/10"

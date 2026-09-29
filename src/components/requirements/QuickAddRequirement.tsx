@@ -41,7 +41,11 @@ const initialValues: QuickAddValues = {
   note: '',
 }
 
-export function QuickAddRequirement() {
+interface QuickAddRequirementProps {
+  label?: string
+}
+
+export function QuickAddRequirement({ label = '快速记录' }: QuickAddRequirementProps) {
   const [open, setOpen] = useState(false)
   const [values, setValues] = useState<QuickAddValues>(initialValues)
   const [error, setError] = useState<string | null>(null)
@@ -83,7 +87,7 @@ export function QuickAddRequirement() {
       <DialogTrigger asChild>
         <Button>
           <Zap />
-          快速记录
+          {label}
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">

@@ -61,14 +61,17 @@ export function RequirementsPage() {
         <div className="flex flex-col items-center justify-center gap-3 rounded-lg border border-dashed py-20 text-center">
           <Radar className="h-10 w-10 text-muted-foreground/50" />
           <div>
-            <p className="text-sm font-medium">需求池还是空的</p>
-            <p className="mt-1 text-sm text-muted-foreground">
-              记录你发现的第一个用户需求信号。
-            </p>
+            <p className="text-sm font-medium">需求池为空</p>
+            <p className="mt-1 text-sm text-muted-foreground">你可以：</p>
+            <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
+              <li>记录用户反馈</li>
+              <li>保存社区讨论</li>
+              <li>添加市场信号</li>
+            </ul>
           </div>
           <Button onClick={() => setCreateOpen(true)}>
             <Plus />
-            记录需求
+            创建需求
           </Button>
         </div>
       ) : (

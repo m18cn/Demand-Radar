@@ -22,7 +22,7 @@ export class LocalStorageAdapter implements StorageAdapter {
       const parsed: unknown = JSON.parse(raw)
       return Array.isArray(parsed) ? (parsed as Requirement[]) : []
     } catch {
-      // 数据损坏时返回空列表，交由上层决定是否回退到演示数据
+      // 数据损坏时返回空列表，避免页面崩溃
       return []
     }
   }

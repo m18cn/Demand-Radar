@@ -98,12 +98,12 @@ export function DashboardPage() {
         <div className="flex flex-col items-center justify-center gap-3 rounded-lg border border-dashed py-24 text-center">
           <Radar className="h-10 w-10 text-muted-foreground/50" />
           <div>
-            <p className="text-sm font-medium">还没有任何需求</p>
+            <p className="text-sm font-medium">还没有需求记录</p>
             <p className="mt-1 text-sm text-muted-foreground">
-              从快速记录一个需求信号开始。
+              开始收集你的第一个产品机会。
             </p>
           </div>
-          <QuickAddRequirement />
+          <QuickAddRequirement label="快速记录需求" />
         </div>
       </div>
     )

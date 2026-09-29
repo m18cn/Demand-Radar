@@ -12,7 +12,7 @@
 - **Research Queue**：Inbox 与 Researching 中的需求，按机会分数排序。
 - **Insights**：来源分布、状态分布、标签分布、用户类型分布、高机会需求（Recharts 可视化）。
 - **快速记录**：全局入口，只需 title / targetUser / source / url / note，自动补全默认字段。
-- **数据管理**：导出 JSON、导入 JSON、重置演示数据、清空所有数据。
+- **数据管理**：导出 JSON、导入 JSON、加载示例数据、清空所有数据。
 
 ## 技术栈
 
@@ -28,9 +28,11 @@
 
 第一版不依赖后端：
 
-- `seed.json`：初始演示数据
 - `localStorage`：用户实际数据
+- `seed.json`：示例数据（仅当用户在「数据 → 加载示例数据」中主动加载）
 - JSON Import / Export：数据备份
+
+首次打开应用时需求池为空，不再自动加载演示数据。用户从「快速记录」或「新建需求」开始，主动创建属于自己的需求。
 
 所有页面通过 `StorageAdapter` 接口读写数据，页面不直接调用 `localStorage`：
 
@@ -75,7 +77,7 @@ npm run build
 ```
 src/
   components/       # UI 组件（ui/ 为 shadcn 风格基础组件）
-  data/seed.json    # 演示数据
+  data/seed.json    # 示例数据
   hooks/            # useTheme 等
   lib/              # utils、filter、analytics、storage、validation
   pages/            # Dashboard / Requirements / Detail / Research / Insights
