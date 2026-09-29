@@ -6,7 +6,6 @@ import type {
 } from '@/types/requirement'
 import { LocalStorageAdapter } from '@/lib/storage/LocalStorageAdapter'
 import type { StorageAdapter } from '@/lib/storage/StorageAdapter'
-import { loadSeedRequirements } from '@/lib/storage/seed'
 import { validateRequirement } from '@/lib/validation/requirementSchema'
 import {
   createRequirement,
@@ -31,8 +30,6 @@ interface RequirementStore {
   deleteRequirement: (id: string) => Promise<void>
   setStatus: (id: string, status: RequirementStatus) => Promise<void>
   updateScores: (id: string, scores: RequirementScores) => Promise<void>
-  clearAllData: () => Promise<void>
-  loadSampleData: () => Promise<void>
   replaceAll: (items: Requirement[]) => Promise<void>
 }
 
@@ -116,20 +113,6 @@ export const useRequirementStore = create<RequirementStore>()((set, get) => {
         requirement.id === id ? withScores(requirement, scores) : requirement,
       )
       await commit(next)
-    },
-
-    clearAllData: async () => {
-      set({ requirements: [] })
-      try {
-        await adapter.clear()
-      } catch (error) {
-        set({ error: errorMessage(error) })
-      }
-    },
-
-    loadSampleData: async () => {
-      const seed = loadSeedRequirements()
-      await commit(seed)
     },
 
     replaceAll: async (items) => {

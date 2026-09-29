@@ -36,8 +36,6 @@ export const requirementSchema = z.object({
   updatedAt: z.string(),
 })
 
-export const requirementArraySchema = z.array(requirementSchema)
-
 /** 导入用：opportunityScore 可为空，由上层重算。 */
 export const importRequirementSchema = requirementSchema.extend({
   opportunityScore: z.number().int().min(0).max(100).optional(),

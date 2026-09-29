@@ -30,8 +30,4 @@ export class LocalStorageAdapter implements StorageAdapter {
   async save(requirements: Requirement[]): Promise<void> {
     window.localStorage.setItem(this.key, JSON.stringify(requirements))
   }
-
-  async clear(): Promise<void> {
-    window.localStorage.removeItem(this.key)
-  }
 }
